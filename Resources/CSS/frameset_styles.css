@@ -175,12 +175,10 @@ p.blockquote{ /* 書類内目次で使用 */
 #tocMenu { display: block; position:fixed; top:0px; left:0px; width:210px; height:100%; background:transparent; }
 * html #tocMenu { position: absolute; }
 
-#bodyText { margin-left: 210px;  padding-left:10px; padding-right:10px; }
-* html #bodyText { margin-left: 220px; }
+#bodyText {padding-left:10px; padding-right:10px; }
 
 .navButtons { float: right; }
 
-/* 元々の Kamluck CSS から */
 
 div.block {
 	margin : 2em 0em;
@@ -258,9 +256,6 @@ dfn {
 tt {
   	font-family : monospace;
 	font-size : 1em;
-}
-
-img {
 }
 
 img.inline {
@@ -354,154 +349,6 @@ table.ordinary th, table.ordinary td {
 	border-width: 1px;
 	margin: 0px;
 	padding: 4px;
-}
-
-
-/* JavaScript で作成した toc フレーム用 */
-#toc table {
-	margin:0px;
-}
-
-#toc td {
-	margin:0px;
-	padding:0px;
-}
-
-.jtoc_closed { background-color: #F1F2F5; padding-bottom: 10px; }
-.jtoc_open { background-color: #FFFFFF; padding-bottom: 10px; }
-.jtoc_open_top_line {border-top: 1px solid #CCCCCC; background-color: #FFFFFF; padding-bottom: 10px;}
-.jtoc_open_bottom_line {border-bottom: 1px solid #CCCCCC; background-color: #FFFFFF; padding-bottom: 10px;}
-.jtoc_open_both_lines {border-bottom: 1px solid #CCCCCC; border-top: 1px solid #CCCCCC; background-color: #ffffff; padding-bottom: 10px;}
-
-/* フレームセット: toc フレーム */
-.toc_contents_text {
-    font-family: 'Lucida Grande', Geneva, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: bold;
-    color: #093D92;
-    padding-right: 5px;
-    padding-top: 4px;
-    padding-bottom: 3px;
-}
-
-.jtoc_open table.expandable { background-color: #FFFFFF; }
-.jtoc_open_top_line table.expandable { background-color: #FFFFFF; }
-.jtoc_open_bottom_line table.expandable { background-color: #FFFFFF; }
-.jtoc_open_both_lines table.expandable { background-color: #FFFFFF; }
-
-.jtoc_open tr.expandable { background-color: #FFFFFF; }
-.jtoc_open_top_line tr.expandable { background-color: #FFFFFF; }
-.jtoc_open_bottom_line tr.expandable { background-color: #FFFFFF; }
-.jtoc_open_both_lines tr.expandable { background-color: #FFFFFF; }
-
-.toc_contents_heading {
-    font-family: 'Lucida Grande', Geneva, Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    padding-bottom: 3px;
-    padding-top: 5px;
-}
-
-/* フレームセット: toc フレームのストタイル WEB AS。TOC に対して開示モデルを使う任意の書類用 */
-#toc {
-    padding: 0px;
-	font: 12px 'Lucida Grande', Geneva, Helvetica, Arial, sans-serif;
-	line-height:normal;
-}
-
-#toc_border {
-    padding-top: 5px;
-    border-bottom: 1px solid #CCC;
-}
-
-#toc h2 { 
-    margin: 0px; 
-    padding: 10px; 
-    font-size: 13px; font-weight: bold;
-    color: #000000;
-    border-bottom: 0px solid;
-}
-
-#toc h3 { 
-    margin: 6px 5px 0px 10px; 
-    font-size: 12px;
-    font-weight: bold;
-    color: #093d92;
-}
-
-#toc h4 { 
-    font-size: 11px;
-    color: #093d92;
-    margin: -5px 0px 0px 14px;
-}
-
-#toc_staticbox {
-    padding: 0px 0px 10px 0px; 
-    border: 1px solid #CCCCCC; 
-    background: #F1F2F5;
-}
-
-#toc ul { 
-    list-style: none outside; 
-    margin-left: 20px;
-	margin-right:0px;
-	margin-bottom: -2px;
-    padding: 0px;
-}
-
-#toc ul ul{ 
-    list-style: none outside; 
-    margin-left: 10px;
-	margin-right:0px;
-	margin-bottom: -2px;
-    padding: 0px;
-}
-
-#toc li a {
-    margin-left: 0px; 
-    display: block; 
-    padding: 0px 5px 0px 0px;
-}
-
-#toc li a.location { 
-    font-weight: bold; color: #000; 
-    text-decoration: none;
-}
-
-#toc li{
-    font-weight: normal; font-size: 11px; 
-    padding: 0px 5px 0px 0px;
-	margin-top:7px;
-	margin-bottom:0px;
-    list-style-type: none;
-    list-style-position: outside;
-    }
-
-#toc ul ul li { 
-	margin-top:7px;
-	margin-bottom:0px;
-    padding-left: 10px;
-}
-
-#toc ul ul ul li { 
-	margin-top:7px;
-	margin-bottom:0px;
-    padding-left: 15px;
-}
-
-#toc li li a {
-    margin-left: 0px;
-}
-
-#toc li.open  {
-    border-top: 1px solid #CCC; border-bottom: 1px solid #CCC; background-color: #fff; 
-}
-
-#toc .open ul { 
-	margin-right:0px;
-    background-color: #fff; 
-}
-
-li img { 
-    margin-left: 0px;
 }
 
 /* 印刷を行う時のスタイル設定 */
