@@ -1,0 +1,526 @@
+@charset "utf_8";
+
+@font-face {
+        src:local("HiraMinPro-W3");
+        font-family:"HiraMinPro";
+        font-weight:300;
+}
+
+@font-face {
+        src:local("HiraMinPro-W6");
+        font-family:"HiraMinPro";
+        font-weight:600;
+}
+
+@font-face {
+        src:local("Kozuka Mincho Std R");
+        font-family:"Kozuka Mincho Std";
+        font-weight:400;
+}
+
+@font-face {
+        src:local("Kozuka Mincho Std B");
+        font-family:"Kozuka Mincho Std";
+        font-weight:500,600,700;
+}
+
+@font-face {
+        src:local("Kozuka Mincho Std H");
+        font-family:"Kozuka Mincho Std";
+        font-weight:800,900;
+}
+
+@font-face {
+        src:local("MMCenturyOldS");
+        font-family:MMCenturyOldS;
+        font-weight:400;
+}
+
+@font-face {
+	src:local("MMCenturyOldS Italic");
+	font-family:MMCenturyOldS;
+	font-weight:400;
+	font-style:italic;
+}
+
+@font-face {
+	src:local("MMCenturyOldS Bold");
+	font-family:MMCenturyOldS;
+	font-weight:500,600,700,800,900;
+}
+
+@font-face {
+	src:local("MMCenturyOldS BoldItalic");
+	font-family:MMCenturyOldS;
+	font-weight:500,600,700,800,900;
+	font-style:italic;
+}
+
+/* リンクテキストのクラス */
+A:link          { color: #093D92; text-decoration: none; }
+A:link:hover    { color: #093D92; text-decoration: underline; }
+A:active        { color: #093D92; text-decoration: none; }
+A:visited       { color: #003366; text-decoration: none; }
+A:visited:hover { color: #003366; text-decoration: underline; } 
+
+/*  IE/Win の code サイズのバグを回避 - Jesper, waffle.wootest.net による */
+* html code {font-size: 101%;}
+* html pre {font-size: 101%; }
+
+/* フレームセット: content フレーム */
+BODY {
+	margin-top: 0;
+	color: #000;
+	background-color:#ffffff;
+	font-family:"HiraMinPro", serif;
+	line-height:1.75em;
+    }
+
+@media screen,tv { body {font-size:12pt;}	
+}
+
+@media print {
+body {font-size:10pt; }
+}
+
+/* フレームセット: H1,H2,H3,H4,H5 */
+
+h1  {
+	margin : 2em 0em 2em 0em;
+    font-weight: bold;
+	font-size: 2em;
+    color: #000;
+	text-align : center;
+	line-height:1.5em;
+    }
+
+h2  {
+    margin-top: 2em;
+    font-size: 1.75em;
+    color: #000;
+    padding-bottom: 0.25em;
+	border-bottom: 1px solid #919699;
+	line-height:1.5em;
+    }
+
+h3  {
+    margin-top: 2em;
+    margin-bottom: .5em;
+    font-size: 1.5em;
+    color: #000;
+	line-height:1.5em;
+    }
+
+h4  {
+    margin-top: 2em;
+    margin-bottom: .5em;
+    font-size: 1.25em;
+    color: #000;
+	line-height:1.5em;
+    }
+
+h5  {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    padding: 0;
+    font-size: 1.125em;
+    color: #000;
+	line-height:1.5em;
+    }
+
+h6  {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    padding: 0;
+    font-size: 1em;
+    color: #000;
+	line-height:1.5em;
+    }
+
+p {
+    margin-top: 0px;
+	margin-bottom: 0px;
+	text-indent : 1em;
+    }
+
+.content_text{ /* 最終更新日で使用 */
+    margin-top: 0px;
+    margin-bottom: 10px; font: 12px 'Lucida Grande', Geneva, Helvetica, Arial, sans-serif;
+}
+
+p.blockquote{ /* 書類内目次で使用 */
+   padding-left: 50pt;
+   padding-right: 50pt;
+   }
+    
+/* フレームセット: ミニナビゲーションスタイル(目次を隠す/表示 と 次ページ/前ページ) */
+.mini_nav_text {
+    font-family: 'Lucida Grande', Geneva, Helvetica, Arial, sans-serif;
+    font-size: 9px;
+    font-weight: normal;
+}
+
+.breadcrumb {
+    font-family: 'Lucida Grande', Geneva, Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+/* 合成された TOC 処理のために追加された対応付け */
+* html { overflow: hidden;  }
+* html body { height: 100%; overflow: auto; width: 100%; margin: 0px; }
+
+#tocMenu { display: block; position:fixed; top:0px; left:0px; width:210px; height:100%; background:transparent; }
+* html #tocMenu { position: absolute; }
+
+#bodyText { margin-left: 210px;  padding-left:10px; padding-right:10px; }
+* html #bodyText { margin-left: 220px; }
+
+.navButtons { float: right; }
+
+/* 元々の Kamluck CSS から */
+
+div.block {
+	margin : 2em 0em;
+}
+
+div.index {
+	font-size : smaller;
+	margin : 0px;
+	padding :0px;
+}
+
+span.noteindex {
+	font-size : 0.85em;
+	vertical-align : 0.25em;
+}
+
+span.ol {
+	text-decoration:overline;
+}
+
+span.ul {
+	text-decoration:underline;
+}
+
+p.noindent {
+	text-indent : 0em;
+}
+
+p.note {
+	font-size : 0.85em;
+	margin : 1em 2em;
+}
+
+em {
+	font-weight : 900;
+	font-style : normal;
+}
+
+strong {
+	color : #ff0000;
+	font-style : normal;
+	font-weight : 900;
+}
+
+sup {
+	font-size : 0.75em;
+	vertical-align : 0.5em;
+        margin-left: 0.1em;
+        margin-right: 0.2em;
+}
+
+sup sub {
+	font-size : 0.5em;
+	vertical-align : -0.15em;
+        
+}
+
+sub {
+	font-size : 0.75em;
+	vertical-align : -0.25em;
+        margin-left:0.1em;
+        margin-right:0.2em;
+}
+
+sub sup {
+	font-size : 0.5em;
+	vertical-align : 0.15em;
+}
+
+dfn {
+	font-weight : 900;
+	font-style : normal;
+}
+
+tt {
+  	font-family : monospace;
+	font-size : 1em;
+}
+
+img {
+}
+
+img.inline {
+	display : inline;
+	vertical-align : middle;
+	margin : 0em 0.25em;
+}
+
+img.navi {
+	width : 51px;
+	height : 22px;
+}
+
+ul, ol {
+        margin-left:1em;
+        margin-right:1em;
+}
+
+ul.no_mark {
+	list-style-type: none;
+}
+
+li {
+	margin-top : 1em;
+	margin-bottom : 1em;
+}
+
+dt {
+	margin-top : 1em;
+}
+
+table {
+	font-size : 1em; 
+	margin-top : 1em; 
+	margin-bottom: 1em;
+	margin-left : auto;
+	margin-right : auto;
+	padding: 0px;
+}
+
+th, td {
+	margin: 0px;
+	padding: 0.25em;
+}
+
+th {
+	font-weight: bold;
+}
+
+caption {
+	font-weight: bold;
+	line-height:1.5em;
+	margin-bottom:0.5em;
+}
+
+table.fig td.fig {
+	text-align: center;
+	vertical-align: middle;
+	padding: 0px;
+}
+
+table.fig td.title {
+	font-weight: bold;
+	text-align: center;
+        line-height: 150%;
+}
+
+table.fig td.explain {
+	font-size : smaller;
+	padding : 0px 2em;
+	vertical-align : top;
+        line-height:150%;
+}
+
+table.fig table {
+	margin-top : 0px;
+	margin-bottom : 0px;
+	margin-left : auto;
+	margin-right : auto;
+	padding : 0px
+}
+
+table.ordinary {
+	border-style: solid;
+	border-width: 1px;
+	border-spacing: 0px;
+}
+
+table.ordinary th, table.ordinary td {
+	border-style: solid;
+	border-width: 1px;
+	margin: 0px;
+	padding: 4px;
+}
+
+
+/* JavaScript で作成した toc フレーム用 */
+#toc table {
+	margin:0px;
+}
+
+#toc td {
+	margin:0px;
+	padding:0px;
+}
+
+.jtoc_closed { background-color: #F1F2F5; padding-bottom: 10px; }
+.jtoc_open { background-color: #FFFFFF; padding-bottom: 10px; }
+.jtoc_open_top_line {border-top: 1px solid #CCCCCC; background-color: #FFFFFF; padding-bottom: 10px;}
+.jtoc_open_bottom_line {border-bottom: 1px solid #CCCCCC; background-color: #FFFFFF; padding-bottom: 10px;}
+.jtoc_open_both_lines {border-bottom: 1px solid #CCCCCC; border-top: 1px solid #CCCCCC; background-color: #ffffff; padding-bottom: 10px;}
+
+/* フレームセット: toc フレーム */
+.toc_contents_text {
+    font-family: 'Lucida Grande', Geneva, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: bold;
+    color: #093D92;
+    padding-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+}
+
+.jtoc_open table.expandable { background-color: #FFFFFF; }
+.jtoc_open_top_line table.expandable { background-color: #FFFFFF; }
+.jtoc_open_bottom_line table.expandable { background-color: #FFFFFF; }
+.jtoc_open_both_lines table.expandable { background-color: #FFFFFF; }
+
+.jtoc_open tr.expandable { background-color: #FFFFFF; }
+.jtoc_open_top_line tr.expandable { background-color: #FFFFFF; }
+.jtoc_open_bottom_line tr.expandable { background-color: #FFFFFF; }
+.jtoc_open_both_lines tr.expandable { background-color: #FFFFFF; }
+
+.toc_contents_heading {
+    font-family: 'Lucida Grande', Geneva, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: 3px;
+    padding-top: 5px;
+}
+
+/* フレームセット: toc フレームのストタイル WEB AS。TOC に対して開示モデルを使う任意の書類用 */
+#toc {
+    padding: 0px;
+	font: 12px 'Lucida Grande', Geneva, Helvetica, Arial, sans-serif;
+	line-height:normal;
+}
+
+#toc_border {
+    padding-top: 5px;
+    border-bottom: 1px solid #CCC;
+}
+
+#toc h2 { 
+    margin: 0px; 
+    padding: 10px; 
+    font-size: 13px; font-weight: bold;
+    color: #000000;
+    border-bottom: 0px solid;
+}
+
+#toc h3 { 
+    margin: 6px 5px 0px 10px; 
+    font-size: 12px;
+    font-weight: bold;
+    color: #093d92;
+}
+
+#toc h4 { 
+    font-size: 11px;
+    color: #093d92;
+    margin: -5px 0px 0px 14px;
+}
+
+#toc_staticbox {
+    padding: 0px 0px 10px 0px; 
+    border: 1px solid #CCCCCC; 
+    background: #F1F2F5;
+}
+
+#toc ul { 
+    list-style: none outside; 
+    margin-left: 20px;
+	margin-right:0px;
+	margin-bottom: -2px;
+    padding: 0px;
+}
+
+#toc ul ul{ 
+    list-style: none outside; 
+    margin-left: 10px;
+	margin-right:0px;
+	margin-bottom: -2px;
+    padding: 0px;
+}
+
+#toc li a {
+    margin-left: 0px; 
+    display: block; 
+    padding: 0px 5px 0px 0px;
+}
+
+#toc li a.location { 
+    font-weight: bold; color: #000; 
+    text-decoration: none;
+}
+
+#toc li{
+    font-weight: normal; font-size: 11px; 
+    padding: 0px 5px 0px 0px;
+	margin-top:7px;
+	margin-bottom:0px;
+    list-style-type: none;
+    list-style-position: outside;
+    }
+
+#toc ul ul li { 
+	margin-top:7px;
+	margin-bottom:0px;
+    padding-left: 10px;
+}
+
+#toc ul ul ul li { 
+	margin-top:7px;
+	margin-bottom:0px;
+    padding-left: 15px;
+}
+
+#toc li li a {
+    margin-left: 0px;
+}
+
+#toc li.open  {
+    border-top: 1px solid #CCC; border-bottom: 1px solid #CCC; background-color: #fff; 
+}
+
+#toc .open ul { 
+	margin-right:0px;
+    background-color: #fff; 
+}
+
+li img { 
+    margin-left: 0px;
+}
+
+/* 印刷を行う時のスタイル設定 */
+@media print {
+    .mini_nav_text, #tocMenu, .hideOnPrint {
+        display: none !important;
+    }
+    #bodyText
+     {
+        position: absolute;
+        top: 15px !important;
+        left: 15px !important;
+        right: 15px !important;
+        margin-left: 0 !important;
+    }
+
+    a:link {text-decoration: none; color: black;}
+    a:visited {text-decoration: none; color: black;}
+    a:active {text-decoration: none; color: black;}
+    a:hover {text-decoration: underline; color: black;}
+}
+
